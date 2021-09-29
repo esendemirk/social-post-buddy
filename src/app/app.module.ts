@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LocationsComponent } from './locations/locations.component';
+import { HashtagsComponent } from './hashtags/hashtags.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LocationsComponent
+    LocationsComponent,
+    HashtagsComponent
   ],
   imports: [
     BrowserModule,
