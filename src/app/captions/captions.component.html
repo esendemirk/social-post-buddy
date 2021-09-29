@@ -1,0 +1,31 @@
+<h1>Captions</h1>
+<h3>Need Captions ideas for your next post?</h3>
+<br>
+<form>
+    <label for="captions">Caption: </label>
+    <input id="captions" type="text" [formControl]="captions"><button (click)="updateCaptions()">Add Caption</button>
+</form>
+
+<br>
+
+<h3>Recent Captions</h3>
+<h4>Check out the recent captions our users have shared!</h4>
+
+<table>
+    <tr>
+        <td style="width: 300px;">The wind is graceful</td>
+        <td style="color: tomato;"><a>Update</a></td>
+        <td style="color: red;"><a>Delete</a></td>
+      </tr>
+      <tr>
+        <td style="width: 300px;">Go hard or go home</td>
+        <td style="color: tomato;"><a>Update</a></td>
+        <td style="color: red;"><a>Delete</a></td>
+      </tr>
+      <tr>
+        <td style="width: 300px;">The world is an ocean</td>
+        <td style="color: tomato;"><a>Update</a></td>
+        <td style="color: red;"><a>Delete</a></td>
+      </tr>
+      
+  </table>
