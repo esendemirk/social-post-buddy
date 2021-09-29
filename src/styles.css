@@ -30,13 +30,11 @@ html, body {
     text-decoration: none;
   }
   
-  li a:hover:not(.active) {
+  li a:hover {
     background-color: rgb(145, 2, 2);
   }
   
-  .active {
-    background-color: rgb(145, 2, 2);
-  }
+  
 
   h1,
   h2,

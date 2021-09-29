@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-hashtags',
@@ -11,5 +13,12 @@ export class HashtagsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  hashtags = new FormControl('');
+
+  updateHashtags(){
+    alert("Added Hashtags"); 
+    
+  }
+
 
 }
