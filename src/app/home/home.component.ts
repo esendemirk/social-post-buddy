@@ -4,11 +4,11 @@ import { StudentService } from '../student.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
-  selector: 'app-not-found',
-  templateUrl: './not-found.component.html',
-  styleUrls: ['./not-found.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class NotFoundComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   constructor() { }
 

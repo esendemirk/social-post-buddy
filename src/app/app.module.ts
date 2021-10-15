@@ -16,10 +16,11 @@ import { StudentService } from './student.service';
 import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [ {
   path: '',  //default component to display
-  component: CaptionsComponent
+  component: HomeComponent
 }, {
   path: 'addCaption',  //when captions added 
   component: CaptionsComponent
@@ -51,7 +52,8 @@ const appRoutes: Routes = [ {
     HashtagsComponent,
     CaptionsComponent,
     NotFoundComponent,
-    NavigationMenuComponent
+    NavigationMenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
