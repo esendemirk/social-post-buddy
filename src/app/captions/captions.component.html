@@ -1,7 +1,7 @@
 <h1>{{mode}} Captions</h1>
 <h3>Need Captions ideas for your next post?</h3>
 <br>
-<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+<form style="width: 250px; margin: 0 auto;" (ngSubmit)="onSubmit()" #myForm="ngForm">
   <div>
       <input placeholder="Type Caption Here" id="caption" [(ngModel)]="caption" name="caption">
       <button type="submit">Submit</button>
