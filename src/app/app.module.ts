@@ -21,11 +21,23 @@ const appRoutes: Routes = [ {
   path: '',  //default component to display
   component: CaptionsComponent
 }, {
-  path: 'addCaption',  //when students added 
+  path: 'addCaption',  //when captions added 
   component: CaptionsComponent
 }, {
-  path: 'editCaption/:_id', //when students edited 
+  path: 'editCaption/:_id', //when captions edited 
   component: CaptionsComponent 
+}, {
+  path: 'addHashtag',  //when hashtags added 
+  component: HashtagsComponent
+}, {
+  path: 'editHashtag/:_id', //when hashtags edited 
+  component: HashtagsComponent 
+}, {
+  path: 'addLocation',  //when locations added 
+  component: LocationsComponent
+}, {
+  path: 'editLocation/:_id', //when locations edited 
+  component: LocationsComponent
 }, {
   path: '**',  //when path cannot be found
   component: NotFoundComponent

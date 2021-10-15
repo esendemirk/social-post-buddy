@@ -1,41 +1,24 @@
-<h1>Hashtags/Keywords</h1>
-<h3>Need hashtag/keyword ideas for your next post?</h3>
+<h1>{{mode}} Hashtags/Keywords</h1>
+<h3>Need Hashtag/Keyword ideas for your next post?</h3>
 <br>
-<form>
-    <label for="hashtags">Hashtags: </label>
-    <input id="hashtags" type="text" [formControl]="hashtags"><button (click)="updateHashtags()">Add Hashtag/Keyword</button>
+<form style="width: 250px; margin: 0 auto;" (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <div>
+      <input placeholder="Type Hashtag/Keyword Here" id="hashtag" [(ngModel)]="hashtag" name="hashtag">
+      <button type="submit">Submit</button>
+  </div>    
 </form>
 
 <br>
 
-<h3>Recent Hashtags</h3>
-<h4>Check out the recent hashtags our users have shared!</h4>
+<h3>Recent Hashtags/Keywords</h3>
+<h4>Check out the recent hashtags/keywords our users have shared!</h4>
 
-<table>
-    <tr>
-      <td style="width: 300px;">#Kennesaw</td>
-      <td style="color: tomato;"><a>Update</a></td>
-      <td style="color: red;"><a>Delete</a></td>
-    </tr>
-    <tr>
-        <td style="width: 300px;">#Marietta</td>
-        <td style="color: tomato;"><a>Update</a></td>
-        <td style="color: red;"><a>Delete</a></td>
-    </tr>
-    <tr>
-        <td style="width: 300px;">#Woodstock</td>
-        <td style="color: tomato;"><a>Update</a></td>
-        <td style="color: red;"><a>Delete</a></td>
-      </tr>
-      <tr>
-        <td style="width: 300px;">#GoOwls</td>
-        <td style="color: tomato;"><a>Update</a></td>
-        <td style="color: red;"><a>Delete</a></td>
-      </tr>
-      <tr>
-        <td style="width: 300px;">#BlackandYellow</td>
-        <td style="color: tomato;"><a>Update</a></td>
-        <td style="color: red;"><a>Delete</a></td>
-      </tr>
-      
-  </table>
+  <div>
+    <table *ngFor ="let student of students let i = index">
+        <tr> 
+          <td style="width: 300px;">{{student.hashtag}}</td>
+          <td><button mat-button color="warn" (click)="onDelete(student._id)">DELETE</button></td>
+          <td><button mat-button color="accent" [routerLink]="['/editHashtag', student._id]">UPDATE</button></td> 
+        </tr>
+      </table>
+  </div>

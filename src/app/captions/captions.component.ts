@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { StudentService } from '../student.service';
-import {ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 
 @Component({
@@ -50,11 +50,12 @@ export class CaptionsComponent implements OnInit {
 
   onSubmit(){
     console.log("You submitted: "  + this.caption);
-    this._myService.addCaptions(this.caption);
+    //this._myService.addCaptions(this.caption);
     if (this.mode == 'Add')
       this._myService.addCaptions(this.caption);
     if (this.mode == 'Edit')
       this._myService.updateCaption(this.id,this.caption);
+    location.reload();
   }
 
   //method called OnInit
