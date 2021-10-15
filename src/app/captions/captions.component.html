@@ -1,9 +1,11 @@
-<h1>Captions</h1>
+<h1>{{mode}} Captions</h1>
 <h3>Need Captions ideas for your next post?</h3>
 <br>
-<form>
-    <label for="captions">Caption: </label>
-    <input id="captions" type="text" [formControl]="captions"><button (click)="updateCaptions()">Add Caption</button>
+<form (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <div>
+      <input placeholder="Type Caption Here" id="caption" [(ngModel)]="caption" name="caption">
+      <button type="submit">Submit</button>
+  </div>    
 </form>
 
 <br>
@@ -11,21 +13,12 @@
 <h3>Recent Captions</h3>
 <h4>Check out the recent captions our users have shared!</h4>
 
-<table>
-    <tr>
-        <td style="width: 300px;">The wind is graceful</td>
-        <td style="color: tomato;"><a>Update</a></td>
-        <td style="color: red;"><a>Delete</a></td>
-      </tr>
-      <tr>
-        <td style="width: 300px;">Go hard or go home</td>
-        <td style="color: tomato;"><a>Update</a></td>
-        <td style="color: red;"><a>Delete</a></td>
-      </tr>
-      <tr>
-        <td style="width: 300px;">The world is an ocean</td>
-        <td style="color: tomato;"><a>Update</a></td>
-        <td style="color: red;"><a>Delete</a></td>
-      </tr>
-      
-  </table>
+  <div>
+    <table *ngFor ="let student of students let i = index">
+        <tr> 
+          <td style="width: 300px;">{{student.caption}}</td>
+          <td><button mat-button color="warn" (click)="onDelete(student._id)">DELETE</button></td>
+          <td><button mat-button color="accent" [routerLink]="['/editCaption', student._id]">UPDATE</button></td> 
+        </tr>
+      </table>
+  </div>

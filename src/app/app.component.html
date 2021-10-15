@@ -1,17 +1,18 @@
-<!-- Navigation Bar -->
-<ul>
-  <li><a href="#home"><b>SocialPostBuddy</b></a></li>
-  <li style="float:right"><a href="#captions">Captions</a></li>
-  <li style="float:right"><a href="#hashtags">Hashtags/Keywords</a></li>
-  <li style="float:right"><a class="active" href="#locations">Locations</a></li>
-</ul>
+<app-navigation-menu></app-navigation-menu>
 
 <div class="content" role="main">
 
+  <router-outlet></router-outlet>
+
+  <!-- <div>
+    <ul *ngFor ="let student of students let i = index">
+        <li> {{student._id}}: {{student.caption}} (index {{i}})<button mat-button color="warn" (click)="onDelete(student._id)">DELETE</button></li>
+    </ul>
+  </div> -->
   <!-- <app-locations></app-locations> -->
 
 <!-- <app-hashtags></app-hashtags> -->
-<app-captions></app-captions>
+<!-- <app-captions></app-captions> -->
   <!-- Resources -->
   <!-- <h2>Resources</h2>
   <p>Here are some links to help you get started:</p> -->
@@ -22,5 +23,3 @@
   </footer>
 
 </div>
-
-<router-outlet></router-outlet>
